@@ -107,7 +107,7 @@ const Router = (props) => {
 	
 	return (
 		<NavigationContainer style={styles.router}>
-			{props.config && createNav('tabNav', props.config)}
+			{props.config && createNav(props.type || 'tabNav', props.config)}
 		</NavigationContainer>
 	);
 };
