@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import {SafeAreaView, StyleSheet} from 'react-native';
+import Router from "./components/router";
+import route from "./conf/route";
+// import PropTypes from "prop-types";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+const App = (props) => {
+	
+	return (
+		<SafeAreaView style={styles.app}>
+			{/*<Text>app</Text>*/}
+			<Router config={route}/>
+		</SafeAreaView>
+	);
+};
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+	app: {
+		flex: 1,
+	},
+	content: {}
 });
+
+App.defaultProps = {};
+App.propTypes = {};
+
+export default App;
