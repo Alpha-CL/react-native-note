@@ -10,7 +10,7 @@ const StackNav = (props) => {
 	const {config, ...lastProps} = props;
 	
 	return (
-		<Stack.Navigator style={styles.TopTabNav} {...lastProps}>
+		<Stack.Navigator style={styles.stackNav} {...lastProps}>
 			{Array.isArray(config) && config.map((tab) => {
 				const {name, component, ...lastTabProps} = tab;
 				return component ?
@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
 	stackNav: {
 		flex: 1,
 	},
-	content: {}
 });
 
 StackNav.defaultProps = {};

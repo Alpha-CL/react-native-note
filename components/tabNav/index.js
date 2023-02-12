@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
 	tabNav: {
 		flex: 1,
 	},
-	content: {}
 });
 
 TabNav.defaultProps = {};

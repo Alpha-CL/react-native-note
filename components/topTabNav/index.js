@@ -10,7 +10,7 @@ const TopTabNav = (props) => {
 	const {config, ...lastProps} = props;
 	
 	return (
-		<TopTab.Navigator style={styles.TopTabNav} {...lastProps}>
+		<TopTab.Navigator style={styles.topTabNav} {...lastProps}>
 			{Array.isArray(config) && config.map((tab) => {
 				const {name, component, ...lastTabProps} = tab;
 				return component ?
@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
 	topTabNav: {
 		flex: 1,
 	},
-	content: {}
 });
 
 TopTabNav.defaultProps = {};

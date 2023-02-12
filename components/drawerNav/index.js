@@ -10,7 +10,7 @@ const DrawerNav = (props) => {
 	const {config, ...lastProps} = props;
 	
 	return (
-		<Drawer.Navigator style={styles.TopTabNav} {...lastProps}>
+		<Drawer.Navigator style={styles.drawerNav} {...lastProps}>
 			{Array.isArray(config) && config.map((tab) => {
 				const {name, component, ...lastTabProps} = tab;
 				return component ?
@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
 	drawerNav: {
 		flex: 1,
 	},
-	content: {}
 });
 
 DrawerNav.defaultProps = {};
